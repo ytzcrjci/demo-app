@@ -6,16 +6,17 @@
             </div>
             <div class="menu-list">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <router-link to="/"><li>Home</li></router-link>
+                    <router-link to="/login"><li>About</li></router-link>
+                    <router-link to="/register"><li>Contact</li></router-link>
+                    <router-link to="/todo"><li>Todo list</li></router-link>
                 </ul>
             </div>
             <div class="buttons">
-                <LoginButtonVue msg="Login"/>
-                <RegisterButtonVue msg="Register"/>
-                
+                <router-link to="/login"><LoginButtonVue msg="Login"/></router-link>
+                <router-link to="/register"><RegisterButtonVue msg="Register"/></router-link>
             </div>
+                <router-view/>
         </div>
     </div>
 </template>
